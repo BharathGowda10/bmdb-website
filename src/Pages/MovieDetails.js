@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import backUp from "../assets/images/backup.png";
 import useTitle from "../hooks/useTitle";

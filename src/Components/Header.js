@@ -47,6 +47,7 @@ const Header = () => {
               onClick={() => setDarkMode(!darkMode)}
               data-tooltip-target="navbar-search-example-toggle-dark-mode-tooltip"
               type="button"
+              aria-label={`${darkMode ? "dark-button" : "light Button"}`}
               data-toggle-dark="light"
               className="flex items-center p-2 mr-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200 toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >

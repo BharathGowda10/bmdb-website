@@ -17,6 +17,7 @@ const MovieCard = ({ movie }) => {
             className="rounded-t-lg"
             src={image}
             alt={movie.original_title}
+            loading="lazy"
           />
         </Link>
         <div className="p-5">

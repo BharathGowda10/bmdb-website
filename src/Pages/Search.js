@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import useFetch from "../hooks/useFetch";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../Components/MovieCard";
@@ -29,9 +29,9 @@ const Search = ({ apiPath }) => {
       <section className="max-w-7xl mx-auto py-7">
         <div className="flex justify-start flex-wrap">
           {movies.map((movie) => (
-            <div key={movie.id}>
+            <Fragment key={movie.id}>
               <MovieCard movie={movie} />
-            </div>
+            </Fragment>
           ))}
         </div>
       </section>

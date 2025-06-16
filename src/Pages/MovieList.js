@@ -1,4 +1,3 @@
-import React from "react";
 import MovieCard from "../Components/MovieCard";
 import useFetch from "../hooks/useFetch";
 import useTitle from "../hooks/useTitle";
