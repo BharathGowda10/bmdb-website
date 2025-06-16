@@ -1,15 +1,15 @@
 import MovieCard from "../Components/MovieCard";
 import useFetch from "../hooks/useFetch";
 import useTitle from "../hooks/useTitle";
-import ProgressCircle from "../Components/ProgressCircle";
 import ApiErrorCard from "../Components/ApiErrorCard";
+import MovieCardSkeletonPage from "../skeleton/MovieCardSkeletonPage";
 
 const MovieList = ({ apiPath, pageTitle }) => {
   const { data: movies, isLoading, isError } = useFetch(apiPath);
   useTitle(pageTitle);
 
   if (isLoading) {
-    return <ProgressCircle />;
+    return <MovieCardSkeletonPage />;
   }
   if (isError) {
     return <ApiErrorCard />;

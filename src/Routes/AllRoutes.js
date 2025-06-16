@@ -1,9 +1,12 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+
 const Search = lazy(() => import("../Pages/Search"));
 const MovieDetails = lazy(() => import("../Pages/MovieDetails"));
 const PageNotFound = lazy(() => import("../Pages/PageNotFound"));
-const ProgressCircle = lazy(() => import("../Components/ProgressCircle"));
+const MovieCardSkeletonPage = lazy(() =>
+  import("../skeleton/MovieCardSkeletonPage")
+);
 const ErrorBoundary = lazy(() => import("../Components/ErrorBoundary"));
 const MovieList = lazy(() => import("../Pages/MovieList"));
 const ApiErrorCard = lazy(() => import("../Components/ApiErrorCard"));
@@ -12,7 +15,7 @@ const AllRoutes = () => {
   return (
     <div className="dark:bg-slate-800">
       <ErrorBoundary fallback={<ApiErrorCard />}>
-        <Suspense fallback={<ProgressCircle />}>
+        <Suspense fallback={<MovieCardSkeletonPage />}>
           <Routes>
             <Route
               path="/"
